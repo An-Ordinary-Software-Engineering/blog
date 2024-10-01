@@ -1,0 +1,12 @@
+---
+const { link, rel, blankActive } = Astro.props;
+---
+
+<a
+    class="bg-b-aose rounded-3xl py-1 px-8 text-[#f9f9f9] text-lg font-bold"
+    href={link}
+    rel={rel}
+    target={blankActive ? "_blank" : "_self"}
+>
+<slot />
+</a>
