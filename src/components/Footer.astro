@@ -1,14 +1,10 @@
 ---
+import Link from "./Link.astro";
+
+const personalAccount: string = "https://github.com/csvitor-dev";
+const organizationAccount: string = "https://github.com/An-Ordinary-Software-Engineering";
 ---
-<footer>
-    <a
-        target="_blank"
-        href="https://github.com/csvitor-dev"
-        rel="GitHub Account"
-    >My Personal GitHub</a>
-    <a
-        target="_blank"
-        href="https://github.com/An-Ordinary-Software-Engineering"
-        rel="GitHub Account"
-    >Organization GitHub</a>
+<footer class="flex h-max py-6 justify-center gap-28 rounded-t-3xl bg-g-aose">
+    <Link link={personalAccount} rel="external" blankActive={true}>My Personal GitHub</Link>
+    <Link link={organizationAccount} rel="external" blankActive={true}>Organization GitHub</Link>
 </footer>
