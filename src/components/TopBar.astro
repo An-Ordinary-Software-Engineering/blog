@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+import { Difficulty } from "../scripts/types/post_data.ts";
+
+interface Props {
+    difficulty: Difficulty;
+}
+
+const { difficulty } = Astro.props;
+---
+
+<div class="flex justify-between items-center font-bold w-full">
+    <button class={`px-0.5 text-center w-20 rounded-full font-bold bg-${difficulty}`}>
+        <p>{difficulty}</p>
+    </button>
+    <button>
+        <Icon name="gear" title="settings" size={20} />
+    </button>
+</div>
