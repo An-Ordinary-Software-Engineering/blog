@@ -1,7 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Difficulty } from "../scripts/types/post_data.ts";
-import { getBgClass } from "../scripts/getBgClass.ts";
 
 interface Props {
     difficulty: Difficulty;
@@ -11,7 +10,7 @@ const { difficulty } = Astro.props;
 ---
 
 <div class="flex justify-between items-center font-bold w-full">
-    <button class={`px-0.5 text-center w-20 rounded-full font-bold ${getBgClass(difficulty)}`}>
+    <button class={`px-0.5 text-center w-20 rounded-full font-bold bg-${difficulty}`}>
         <p>{difficulty}</p>
     </button>
     <button>
