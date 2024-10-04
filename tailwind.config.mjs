@@ -6,9 +6,6 @@ export default {
       "b-aose": "#0f0f0f",
       "w-aose": "#f0f0f0",
       "g-aose": "#e5e5e5",
-      "easy": "#7bff6a",
-      "medium": "#fffb7d",
-      "hard": "#ff7d7d",
     },
     extend: {
       boxShadow: {
