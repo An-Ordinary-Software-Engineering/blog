@@ -1,0 +1,18 @@
+---
+interface Props {
+    link: string;
+    rel: string;
+    blankActive: boolean;
+}
+
+const { link, rel, blankActive } = Astro.props;
+---
+
+<a
+    class="transition-colors ease-linear delay-150 bg-inherit border-2 border-b-aose hover:bg-b-aose rounded-xl py-1 px-6 text-b-aose hover:text-[#f9f9f9] text-lg font-bold"
+    href={link}
+    rel={rel}
+    target={blankActive ? "_blank" : "_self"}
+>
+<slot />
+</a>
