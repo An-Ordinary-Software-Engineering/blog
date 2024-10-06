@@ -1,0 +1,10 @@
+---
+import Link from "./Link.astro";
+---
+
+<nav class="flex gap-2 w-fit m-4">
+    <Link link="/" rel="next" blankActive={false}>Home</Link>
+    <Link link="/posts/" rel="next" blankActive={false}>Posts</Link>
+    <Link link="#" rel="next" blankActive={false}>Repos</Link>
+    <Link link="#" rel="author" blankActive={false}>About</Link>
+</nav>

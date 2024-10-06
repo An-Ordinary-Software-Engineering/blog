@@ -1,22 +1,16 @@
 ---
 import { Image } from "astro:assets";
 import aoseImg from "../assets/aose_black.svg";
-import Link from "./Link.astro";
+import NavBar from "./NavBar.astro";
 ---
 
 <header 
-  class="flex h-max border-b-b-aose border-b-4 rounded-b-3xl justify-between items-center font-bold"
+  class="flex h-20 border-b-b-aose border-b-4 rounded-b-3xl justify-between items-center"
 >
-      <div class="flex m-2 items-center">
-        <Image
-          class="w-20"
-          src={aoseImg}
-          alt="aOSE logo"
-        />
-        <h1 class="ml-4 text-2xl">An Ordinary Software Engineering</h1>
-      </div>
-      <nav class="flex gap-8 h-fit m-4">
-        <Link link="#" rel="next" blankActive={false}>Posts</Link>
-        <Link link="#" rel="author" blankActive={false}>About</Link>
-      </nav>
+      <Image
+        class="m-1 w-16"
+        src={aoseImg}
+        alt="aOSE logo"
+      />
+      <NavBar />
 </header>
