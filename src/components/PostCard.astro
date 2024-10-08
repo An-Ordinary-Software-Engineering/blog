@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 import Title from "./Title.astro";
 import TopBar from "./TopBar.astro";
-import { PostCard } from "../scripts/types/post_data.ts";
+import { type Post } from "../scripts/types/post_data.ts";
 
 interface Props {
-    post: PostCard;
+    post: Post;
 }
 
 const { post } = Astro.props;
