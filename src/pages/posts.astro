@@ -1,0 +1,50 @@
+---
+import PostLayout from "../layouts/PostLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import { type Post, Difficulty } from "../scripts/types/post_data.ts";
+
+const posts: Post[] = [ 
+    {
+        diff: Difficulty.easy,
+        image: {
+            src: "https://cdn.thexcodes.com/imgs/reactJS.png",
+            alt: "A peaceful nature scene",
+        },
+        title: {
+            link: "https://example.com/post1",
+            text: "Exploring the Tranquility of Nature",
+        },
+        description: "An introductory guide to finding peace and relaxation in nature.",
+    },
+    {
+        diff: Difficulty.medium,
+        image: {
+            src: "https://www.csharp411.com/wp-content/uploads/2023/03/word-image-720-1.png",
+            alt: "A challenging mountain trail",
+        },
+        title: {
+            link: "https://example.com/post2",
+            text: "Mastering the Art of Mountain Hiking",
+        },
+        description: "Learn how to prepare and navigate challenging mountain trails with confidence.",
+    },
+    {
+        diff: Difficulty.hard,
+        image: {
+            src: "https://blog.safetycontrol.ind.br/wp-content/uploads/2021/11/Docker.png",
+            alt: "A complex web of code",
+        },
+        title: {
+            link: "https://example.com/post3",
+            text: "Advanced Concepts in Web Development",
+        },
+        description: "Dive deep into advanced web development techniques and improve your coding skills.",
+    }
+];
+---
+
+<PostLayout>
+    { posts.map((p) => (
+        <PostCard post={p} />
+    )) }
+</PostLayout>

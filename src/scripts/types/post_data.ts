@@ -4,7 +4,7 @@ export enum Difficulty {
   hard = "hard",
 }
 
-export interface PostCard {
+export interface Post {
   diff: Difficulty;
   image: {
     src: string;
