@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import github from "../assets/github.svg";
+
+const organization: string = "https://github.com/An-Ordinary-Software-Engineering";
+---
+
+<a href={organization} rel="external" target="_blank"
+    class="ml-2"
+>
+    <Image
+        class="w-8"
+        src={github}
+        alt="aOSE GitHub account"
+    />
+</a>

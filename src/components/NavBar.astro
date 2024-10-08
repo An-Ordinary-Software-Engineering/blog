@@ -1,10 +1,12 @@
 ---
 import Link from "./Link.astro";
+import GitHubProj from "./GitHubProj.astro";
 ---
 
-<nav class="flex gap-2 w-fit m-4">
+<nav class="flex gap-4 w-fit m-4 items-center">
     <Link link="/" rel="next" blankActive={false}>Home</Link>
     <Link link="/posts/" rel="next" blankActive={false}>Posts</Link>
-    <Link link="#" rel="next" blankActive={false}>Repos</Link>
-    <Link link="#" rel="author" blankActive={false}>About</Link>
+    <Link link="/repos/" rel="next" blankActive={false}>Repos</Link>
+    <Link link="/about/" rel="author" blankActive={false}>About</Link>
+    <GitHubProj />
 </nav>
