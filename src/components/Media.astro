@@ -1,0 +1,21 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    info: {
+        iconRef: string;
+        url: string;
+    };
+}
+
+const { info } = Astro.props;
+const path = `media/${info.iconRef}`;
+---
+
+<a 
+    class="ml-2 p-1 transition hover:bg-[#f0f0f0] hover:scale-110 rounded-lg"
+    href={info.url}
+    rel="external"
+>
+    <Icon name={path} title={info.iconRef} size={25} />
+</a>
