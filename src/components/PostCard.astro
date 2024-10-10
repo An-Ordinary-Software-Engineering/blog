@@ -24,7 +24,9 @@ const { link, text } = post.title;
       width="200"
       height="200"
     />
-    <Title ref={link}>{text}</Title>
+    <Title>
+      <a href={link} rel="next">{text}</a>
+    </Title>
     <p
       class="h-full text-lg"
     >{post.description}</p>

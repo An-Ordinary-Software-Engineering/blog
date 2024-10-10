@@ -1,16 +1,6 @@
 ---
-interface Props {
-    ref: string;
-}
-
-const { ref } = Astro.props;
 ---
 
 <h2 class="mb-3 text-2xl font-bold">
-    <a
-      href={ref}
-      rel="next"
-    >
-      <slot />
-    </a>
+    <slot />
 </h2>
