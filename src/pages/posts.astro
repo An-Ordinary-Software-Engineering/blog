@@ -1,11 +1,11 @@
 ---
 import PostLayout from "../layouts/PostLayout.astro";
 import PostCard from "../components/PostCard.astro";
-import { type Post, Difficulty } from "../scripts/types/post_data.ts";
+import { type Post } from "../scripts/types/post_data.ts";
 
 const posts: Post[] = [ 
     {
-        diff: Difficulty.easy,
+        diff: "easy",
         image: {
             src: "https://cdn.thexcodes.com/imgs/reactJS.png",
             alt: "A peaceful nature scene",
@@ -17,7 +17,7 @@ const posts: Post[] = [
         description: "An introductory guide to finding peace and relaxation in nature.",
     },
     {
-        diff: Difficulty.medium,
+        diff: "medium",
         image: {
             src: "https://www.csharp411.com/wp-content/uploads/2023/03/word-image-720-1.png",
             alt: "A challenging mountain trail",
@@ -29,7 +29,7 @@ const posts: Post[] = [
         description: "Learn how to prepare and navigate challenging mountain trails with confidence.",
     },
     {
-        diff: Difficulty.hard,
+        diff: "hard",
         image: {
             src: "https://blog.safetycontrol.ind.br/wp-content/uploads/2021/11/Docker.png",
             alt: "A complex web of code",

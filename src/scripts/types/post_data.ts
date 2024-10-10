@@ -1,8 +1,4 @@
-export enum Difficulty {
-  easy = "easy",
-  medium = "medium",
-  hard = "hard",
-}
+export type Difficulty = "easy" | "medium" | "hard";
 
 export interface Post {
   diff: Difficulty;
