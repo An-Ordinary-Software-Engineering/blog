@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Title from "./Title.astro";
 import TopBar from "./TopBar.astro";
 import { type Post } from "../scripts/types/Post.ts";
+import Description from "./Description.astro";
 
 interface Props {
     post: Post;
@@ -27,7 +28,7 @@ const { link, text } = post.title;
     <Title>
       <a href={link} rel="next">{text}</a>
     </Title>
-    <p
-      class="h-full text-lg"
-    >{post.description}</p>
+    <Description>
+      {post.description}
+    </Description>
 </article>
