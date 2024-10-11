@@ -59,6 +59,8 @@ export const personal: Author = {
       name: "PostgreSQL",
     },
   ],
+  description:
+    "I'm a backend developer 🗄️, focusing on the .NET environment. However, I have been studying other technologies and languages ​​for a long time, whether in the backend or frontend 🖥️ (which could be considered a fullstack 🔗). Despite this, my greatest appreciation lies in the entirety of development, that is, before that: the software processes and its life cycle 📊. Therefore, I can say that I am an admirer of software engineering ⚙️ and its disciplines!",
 };
 
 export const organization: Author = {
@@ -71,4 +73,6 @@ export const organization: Author = {
       url: "https://github.com/An-Ordinary-Software-Engineering",
     },
   ],
+  description:
+    "Far beyond development, software engineering is fascinating in its principles with processes and methodologies, I hope to share this fascination.",
 };

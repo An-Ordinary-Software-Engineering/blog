@@ -10,4 +10,5 @@ export interface Author {
     iconRef: string;
     name: string;
   }[];
+  description: string;
 }
