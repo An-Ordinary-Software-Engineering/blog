@@ -1,8 +1,8 @@
-import { type AboutInfo } from "./types/AboutInfo";
+import { type Author } from "./types/Author";
 
-export const personal: AboutInfo = {
+export const personal: Author = {
   avatarUrl: "https://avatars.githubusercontent.com/u/118987544?v=4",
-  username: "Vitor Costa",
+  name: "Vitor Costa",
   media: [
     {
       iconRef: "email",
@@ -61,9 +61,9 @@ export const personal: AboutInfo = {
   ],
 };
 
-export const organization: AboutInfo = {
+export const organization: Author = {
   avatarUrl: "https://avatars.githubusercontent.com/u/178744342?s=200&v=4",
-  username: "An Ordinary Software Engineering",
+  name: "An Ordinary Software Engineering",
   media: [
     {
       iconRef: "github",

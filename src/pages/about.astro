@@ -1,11 +1,11 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
-import UserInfo from "../components/UserInfo.astro";
-import { personal, organization } from "../scripts/users.ts";
+import AuthorInfo from "../components/AuthorInfo.astro";
+import { personal, organization } from "../scripts/authors.ts";
 ---
 
 <HomeLayout>
     <h1 class="text-5xl">About this blog</h1>
-    <UserInfo user={organization} />
-    <UserInfo user={personal} />
+    <AuthorInfo author={organization} />
+    <AuthorInfo author={personal} />
 </HomeLayout>

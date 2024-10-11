@@ -1,5 +1,5 @@
-export interface AboutInfo {
-  username: string;
+export interface Author {
+  name: string;
   avatarUrl: string;
   media?: {
     iconRef: string;
