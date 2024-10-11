@@ -15,7 +15,7 @@ const { media, stacks } = user;
 
 <article class="flex p-3 mt-8 bg-g-aose rounded-lg">
     <Image 
-        class="w-52 mr-5 rounded-lg"
+        class="w-52 max-h-52 mr-5 rounded-lg"
         src={user.avatarUrl}
         alt="Personal GitHub"
         width={100}
@@ -23,7 +23,6 @@ const { media, stacks } = user;
     />
     <div class="flex flex-col w-[100%]">
         <Title>{user.username}</Title>
-        <code class="text-xl">{user.alias}</code>
         {media && <MediaList media={media} />}
         {stacks && <StackList stacks={stacks} />}
     </div>
