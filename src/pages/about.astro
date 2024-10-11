@@ -1,45 +1,11 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
 import UserInfo from "../components/UserInfo.astro";
-
-const personalUser = {
-    avatarUrl: "https://avatars.githubusercontent.com/u/118987544?v=4",
-    alias: "csvitor-dev",
-    username: "Vitor Costa (csvitor-dev)",
-    media: [
-        {
-            iconRef: "github",
-            url: "https://github.com/csvitor-dev",
-        },
-        {
-            iconRef: "linkedin",
-            url: "https://www.linkedin.com/in/vitor-costa-de-sousa/",
-        },
-        {
-            iconRef: "email",
-            url: "mailto:csvitor.dev@gmail.com",
-        },
-    ],
-    stacks: [
-        {
-            iconRef: "golang",
-            name: "Golang",
-        },
-        {
-            iconRef: "docker",
-            name: "Docker",
-        },
-    ],
-};
-const orgUser = {
-    avatarUrl: "https://avatars.githubusercontent.com/u/178744342?s=200&v=4",
-    alias: "aOSE",
-    username: "An Ordinary Software Engineering",
-};
+import { personal, organization } from "../scripts/users.ts";
 ---
 
 <HomeLayout>
     <h1 class="text-5xl">About this blog</h1>
-    <UserInfo user={orgUser} />
-    <UserInfo user={personalUser} />
+    <UserInfo user={organization} />
+    <UserInfo user={personal} />
 </HomeLayout>

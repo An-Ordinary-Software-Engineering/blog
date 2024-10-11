@@ -4,6 +4,7 @@ import { Icon } from 'astro-icon/components';
 interface Props {
     info: {
         iconRef: string;
+        name: string;
         url: string;
     };
 }
@@ -17,5 +18,5 @@ const path = `media/${info.iconRef}`;
     href={info.url}
     rel="external"
 >
-    <Icon name={path} title={info.iconRef} size={25} />
+    <Icon name={path} title={info.name} size={25} />
 </a>

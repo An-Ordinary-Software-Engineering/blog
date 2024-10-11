@@ -1,9 +1,9 @@
 export interface AboutInfo {
   username: string;
   avatarUrl: string;
-  alias?: string;
   media?: {
     iconRef: string;
+    name: string;
     url: string;
   }[];
   stacks?: {
