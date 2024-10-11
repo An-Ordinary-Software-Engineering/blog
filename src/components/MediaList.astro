@@ -1,5 +1,6 @@
 ---
 import Media from './Media.astro';
+import SubTitle from './SubTitle.astro';
 
 interface Props {
     media: {
@@ -12,8 +13,11 @@ interface Props {
 const { media } = Astro.props;
 ---
 
-<div class="flex">
-    {media.map((m) => (
-        <Media info={m} />
-    ))}
-</div>
+<section class="mb-1">
+    <SubTitle>Contacts | Media</SubTitle>
+    <div class="flex">
+        {media.map((m) => (
+            <Media info={m} />
+        ))}
+    </div>
+</section>

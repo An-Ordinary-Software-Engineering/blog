@@ -1,5 +1,6 @@
 ---
 import Stack from './Stack.astro';
+import SubTitle from './SubTitle.astro';
 
 interface Props {
     stacks: {
@@ -10,9 +11,11 @@ interface Props {
 
 const { stacks } = Astro.props;
 ---
-
-<div class="grid grid-cols-4 grid-rows-2 w-72">
-    {stacks.map((s) => (
-        <Stack info={s} />
-    ))}
-</div>
+<section class="mb-1">
+    <SubTitle>Skills</SubTitle>
+    <div class="grid grid-cols-4 grid-rows-2 w-72">
+        {stacks.map((s) => (
+            <Stack info={s} />
+        ))}
+    </div>
+</section>
