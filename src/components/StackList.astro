@@ -11,7 +11,7 @@ interface Props {
 const { stacks } = Astro.props;
 ---
 
-<div class="flex">
+<div class="grid grid-cols-4 grid-rows-2 w-72">
     {stacks.map((s) => (
         <Stack info={s} />
     ))}
