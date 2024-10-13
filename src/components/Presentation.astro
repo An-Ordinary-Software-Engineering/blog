@@ -1,0 +1,16 @@
+---
+import SubTitle from "./SubTitle.astro"
+
+interface Props {
+    who?: string;
+}
+
+const { who } = Astro.props;
+---
+
+<section class="h-fit">
+    {who && <SubTitle>Sobre <code class="bg-b-aose text-w-aose rounded px-1 py-0.5">{who}</code></SubTitle>}
+    <div class="text-lg">
+        <slot />
+    </div>
+</section>
