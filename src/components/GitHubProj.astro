@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import github from "../assets/github.svg";
+import { Icon } from "astro-icon/components";
 
 const organization: string = "https://github.com/An-Ordinary-Software-Engineering";
 ---
@@ -8,9 +7,10 @@ const organization: string = "https://github.com/An-Ordinary-Software-Engineerin
 <a href={organization} rel="external" target="_blank"
     class="ml-2 p-1 transition-all ease-linear hover:bg-[#f0f0f0] hover:scale-110 rounded-lg"
 >
-    <Image
+    <Icon
         class="w-8"
-        src={github}
-        alt="aOSE GitHub account"
+        name="media/github"
+        title="GitHub"
+        size={30}
     />
 </a>
