@@ -1,11 +1,14 @@
 ---
-import HomeLayout from "../layouts/HomeLayout.astro";
+import AboutLayout from "../layouts/AboutLayout.astro";
 import AuthorInfo from "../components/AuthorInfo.astro";
-import { personal, organization } from "../scripts/authors.ts";
+import { fetch } from "../scripts/authorsFetch.ts";
+
+const authors = fetch();
 ---
 
-<HomeLayout>
-    <h1 class="text-5xl">About this blog</h1>
-    <AuthorInfo author={organization} />
-    <AuthorInfo author={personal} />
-</HomeLayout>
+<AboutLayout>
+    <h1 class="text-5xl font-black">Sobre esse blog</h1>
+    {authors.map((a) => (
+        <AuthorInfo author={a.data} description={a.description}/>
+    ))}
+</AboutLayout>
