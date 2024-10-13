@@ -2,16 +2,19 @@
 import { Image } from "astro:assets";
 import { type Author } from "../scripts/types/Author";
 import Title from "./Title.astro";
-import Description from "./Description.astro";
+import Presentation from "./Presentation.astro";
 import MediaList from "./MediaList.astro";
 import StackList from "./StackList.astro";
 
 interface Props {
     author: Author;
+    description: any;
 }
 
-const { author } = Astro.props;
+const { author, description } = Astro.props;
 const { media, stacks } = author;
+
+const { Content } = await description?.render();
 ---
 
 <article class="flex p-3 mt-8 w-fit bg-g-aose rounded-lg">
@@ -21,14 +24,17 @@ const { media, stacks } = author;
         alt="Personal GitHub"
         width={100}
         height={100}
+        loading="eager"
     />
-    <div class="flex flex-col w-fit">
+    <section class="flex flex-col w-fit">
         <Title>{author.name}</Title>
         {media && <MediaList media={media} />}
         {stacks && <StackList stacks={stacks} />}
-    </div>
+    </section>
     <span class="border-[1px] border-[#f1f1f1] mx-5"></span>
-    <Description subTitle="About me">
-        {author.description}
-    </Description>
+    { Content &&
+        <Presentation who={author.name}>
+            <Content />
+        </Presentation>
+    }
 </article>
