@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageTitle="404">
+    <main class="flex justify-center items-center">
+        <div class="flex flex-col gap-y-1 p-3 shadow-lg bg-g-aose rounded-xl w-fit text-center">
+            <div class="self-center p-2 shadow-post bg-b-aose rounded-lg text-w-aose w-fit">
+                <h1 class="text-5xl font-extrabold">404</h1>
+            </div>
+            <p class="text-xl font-bold">Página não encontrada!</p>
+            <p class="text-lg font-medium">Você está longe!</p>
+            <p class="text-sm font-normal">Volte para cá!</p>
+            <a
+            class="text-xs font-light hover:text-[#5f8dff] hover:underline" href="/" 
+            rel="previous">Clique aqui!</a>
+        </div>
+    </main>
+</BaseLayout>
