@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Anchor from "../components/Anchor.astro";
 ---
 
 <BaseLayout pageTitle="404">
@@ -11,9 +12,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <p class="text-xl font-bold">Página não encontrada!</p>
             <p class="text-lg font-medium">Você está longe!</p>
             <p class="text-sm font-normal">Volte para cá!</p>
-            <a
-            class="text-xs font-light hover:text-[#5f8dff] hover:underline" href="/" 
-            rel="previous">Clique aqui!</a>
+            <Anchor text="Clique aqui!" href="/" type="previous" />
         </div>
     </main>
 </BaseLayout>
