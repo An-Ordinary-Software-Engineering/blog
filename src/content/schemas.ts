@@ -1,5 +1,7 @@
 import { z, defineCollection, reference } from "astro:content";
 
+export const currentYear = new Date().getFullYear();
+
 const authorCollection = defineCollection({
   type: "data",
   schema: z.object({
@@ -25,6 +27,24 @@ const authorCollection = defineCollection({
   }),
 });
 
+const brandCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    year: z
+      .number()
+      .min(currentYear)
+      .max(currentYear + 1)
+      .nullable(),
+    registry: z.string(),
+    terms: z.array(
+      z.object({
+        ref: z.string().url(),
+        name: z.string(),
+      })
+    ),
+  }),
+});
+
 const descriptionCollection = defineCollection({
   type: "content",
   schema: z.object({
@@ -32,4 +52,4 @@ const descriptionCollection = defineCollection({
   }),
 });
 
-export { authorCollection, descriptionCollection };
+export { authorCollection, brandCollection, descriptionCollection };

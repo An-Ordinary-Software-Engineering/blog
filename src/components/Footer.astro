@@ -1,4 +1,31 @@
 ---
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+import aoseImg from "../assets/aose_white.svg";
+import Anchor from "./Anchor.astro";
+import {currentYear} from "../content/schemas";
+
+const content = await getEntry("brands", "aose");
+const { data } = content;
+
+const year = data.year 
+    ? data.year 
+    : currentYear;
+
+const brand = `${data.registry}, ${year}`;
 ---
-<footer class="flex min-h-20 h-max py-6 justify-center gap-28 rounded-t-3xl bg-b-aose">
+<footer class="flex min-h-20 h-max items-center px-3 gap-3 bg-b-aose text-w-aose">
+    <Image
+        class="h-fit w-8"
+        src={aoseImg}
+        alt="aOSE Logo"
+        loading="eager"
+    />
+    <p class="text-sm">{brand}</p>
+    <span class="border-[1px] border-[#2b2b2b] h-12 mx-1"></span>
+    <nav>
+        {data.terms.map((t) => (
+            <Anchor text={t.name} href={t.ref} type="external" />
+        ))}
+    </nav>
 </footer>
