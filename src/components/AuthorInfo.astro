@@ -14,7 +14,7 @@ interface Props {
 const { author, description } = Astro.props;
 const { media, stacks } = author;
 
-const { Content } = await description?.render();
+const { Content } = await description?.render() ?? {};
 ---
 
 <article class="flex p-3 mt-8 w-fit bg-g-aose rounded-lg">
