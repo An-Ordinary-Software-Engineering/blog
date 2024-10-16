@@ -49,12 +49,20 @@
       "name": "React"
     },
     {
+      "iconRef": "next",
+      "name": "Next.js"
+    },
+    {
       "iconRef": "docker",
       "name": "Docker"
     },
     {
       "iconRef": "psql",
       "name": "PostgreSQL"
+    },
+    {
+      "iconRef": "mongodb",
+      "name": "MongoDB"
     }
   ]
 }
