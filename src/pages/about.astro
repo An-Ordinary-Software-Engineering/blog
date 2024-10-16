@@ -1,9 +1,9 @@
 ---
 import AboutLayout from "../layouts/AboutLayout.astro";
 import AuthorInfo from "../components/AuthorInfo.astro";
-import { fetch } from "../scripts/authorsFetch.ts";
+import { fetchAll } from "../scripts/fetchData.ts";
 
-const authors = fetch();
+const authors = await fetchAll();
 ---
 
 <AboutLayout>
