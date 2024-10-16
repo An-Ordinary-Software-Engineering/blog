@@ -7,11 +7,17 @@ import NavBar from "./NavBar.astro";
 <header 
   class="flex h-20 border-b-b-aose border-b-4 justify-between items-center"
 >
-      <Image
-        class="ml-3 w-16"
-        src={aoseImg}
-        alt="aOSE logo"
-        loading="eager"
-      />
+      <a
+        class="ml-3 p-1 transition-all ease-linear hover:bg-w-aose hover:scale-110 rounded-lg " 
+        href="/" 
+        rel="previous"
+      >
+        <Image
+          class="w-14"
+          src={aoseImg}
+          alt="aOSE logo"
+          loading="eager"
+        />
+      </a>
       <NavBar />
 </header>
