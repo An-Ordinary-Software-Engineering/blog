@@ -36,6 +36,7 @@ const brandCollection = defineCollection({
       .max(currentYear + 1)
       .nullable(),
     registry: z.string(),
+    source: z.string().url(),
     terms: z.array(
       z.object({
         ref: z.string().url(),

@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import aoseImg from "../assets/aose_white.svg";
 import Anchor from "./Anchor.astro";
-import {currentYear} from "../content/schemas";
+import { currentYear } from "../content/schemas";
 
 const content = await getEntry("brands", "aose");
 const { data } = content;
@@ -11,16 +11,22 @@ const { data } = content;
 const year = data.year 
     ? data.year 
     : currentYear;
-
 const brand = `${data.registry}, ${year}`;
 ---
+
 <footer class="flex min-h-20 h-max items-center px-3 gap-3 bg-b-aose text-w-aose">
-    <Image
-        class="h-fit w-8"
-        src={aoseImg}
-        alt="aOSE Logo"
-        loading="eager"
-    />
+    <a
+        class="p-1 transition-all ease-linear hover:bg-[#2b2b2b] hover:scale-110 rounded-lg" 
+        href={data.source}
+        rel="external"
+      >
+        <Image
+            class="h-fit w-8"
+            src={aoseImg}
+            alt="aOSE Logo"
+            loading="eager"
+        />
+    </a>
     <p class="text-sm">{brand}</p>
     <span class="border-[1px] border-[#2b2b2b] h-12 mx-1"></span>
     <nav>
