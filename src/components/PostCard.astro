@@ -9,14 +9,13 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { src, alt } = post.image;
-const { link, text } = post.title;
+const { src, alt } = post.heroImg;
 ---
 
 <article
     class="flex flex-col w-[23rem] h-[25rem] px-3 py-3 rounded-3xl shadow-post bg-g-aose"
 >
-    <TopBar difficulty={post.diff} />
+    <TopBar difficulty={post.difficulty} />
     <Image
       class="w-96 h-40 my-3 object-cover rounded-t-xl"
       src={src}
@@ -26,7 +25,7 @@ const { link, text } = post.title;
       loading="eager"
     />
     <Title>
-      <a href={link} rel="next">{text}</a>
+      <a href={post.link} rel="next">{post.title}</a>
     </Title>
     <p class="h-fit text-lg">
       {post.description}

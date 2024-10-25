@@ -1,14 +1,12 @@
 export type Difficulty = "easy" | "medium" | "hard";
 
 export interface Post {
-  diff: Difficulty;
-  image: {
+  difficulty: Difficulty;
+  title: string;
+  link: string;
+  heroImg: {
     src: string;
     alt: string;
-  };
-  title: {
-    link: string;
-    text: string;
   };
   description: string;
 }
