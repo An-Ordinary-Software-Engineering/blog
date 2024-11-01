@@ -1,9 +1,21 @@
 ---
+import type { Post } from "../scripts/types/Post";
 import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+
+const { src, alt } = post.heroImg;
 ---
 
-<BaseLayout pageTitle="Posts">
-    <main class="grid grid-cols-3 justify-items-center px-10 mb-3 gap-y-8">
-        <slot />
+<BaseLayout pageTitle={post.title}>
+    <main>
+        <img src={src} alt={alt} loading="eager" width="100" />
+        <article>
+            <slot />
+        </article>
     </main>
 </BaseLayout>
