@@ -6,9 +6,10 @@ import { type Post } from "../scripts/types/Post.ts";
 
 interface Props {
     post: Post;
+    to: string
 }
 
-const { post } = Astro.props;
+const { post, to } = Astro.props;
 const { src, alt } = post.heroImg;
 ---
 
@@ -25,7 +26,7 @@ const { src, alt } = post.heroImg;
       loading="eager"
     />
     <Title>
-      <a href={post.link} rel="next">{post.title}</a>
+      <a href={`/posts/${to}/`} rel="next">{post.title}</a>
     </Title>
     <p class="h-fit text-lg">
       {post.description}
