@@ -1,13 +1,14 @@
 ---
+import { getCollection } from "astro:content";
 import PostCard from "../components/PostCard.astro";
-import PostLayout from "../layouts/PostLayout.astro";
+import CardLayout from "../layouts/CardLayout.astro";
 import type { Post } from "../scripts/types/Post.ts";
 
-const metaData = await Astro.glob("../content/posts/*.mdx");
+const metaData = await getCollection("posts");
 ---
 
-<PostLayout>
-    { metaData.map((p) => (
-        <PostCard post={p.frontmatter as Post} />
+<CardLayout>
+    { metaData.map((post) => (
+        <PostCard to={post.slug} post={post.data as Post} />
     )) }
-</PostLayout>
+</CardLayout>
