@@ -57,7 +57,6 @@ export const postCollection = defineCollection({
   schema: z.object({
     difficulty: z.enum(["easy", "medium", "hard"]),
     title: z.string(),
-    link: z.string(),
     heroImg: z.object({
       src: z.string(),
       alt: z.string(),
