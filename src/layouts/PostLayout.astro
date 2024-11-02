@@ -11,7 +11,7 @@ const { post } = Astro.props;
 const { src, alt } = post.heroImg;
 ---
 
-<BaseLayout title={post.title}>
+<BaseLayout title={post.title} description={post.meta}>
     <img src={src} alt={alt} loading="eager" width="100" />
     <article>
         <slot />
