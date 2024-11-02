@@ -61,6 +61,7 @@ export const postCollection = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
+    meta: z.string(),
     description: z.string(),
   }),
 });

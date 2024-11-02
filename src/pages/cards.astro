@@ -9,7 +9,7 @@ const metaData: CollectionEntry<"posts">[] = await getCollection("posts");
 ---
 
 <CardLayout>
-    { metaData.map((post) => (
-        <PostCard to={post.slug} post={post.data as Post} />
+    { metaData.map((p) => (
+        <PostCard to={p.slug} post={p.data as Post} />
     )) }
 </CardLayout>
