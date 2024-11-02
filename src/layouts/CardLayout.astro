@@ -2,8 +2,8 @@
 import BaseLayout from "./BaseLayout.astro";
 ---
 
-<BaseLayout pageTitle="Posts">
-    <main class="grid grid-cols-3 justify-items-center px-24 mb-3 gap-y-12">
-        <slot />
-    </main>
+<BaseLayout title="Posts"
+    className="grid grid-cols-3 justify-items-center px-24 mb-3 gap-y-12"
+>
+    <slot />
 </BaseLayout>
