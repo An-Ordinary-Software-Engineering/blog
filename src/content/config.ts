@@ -1,7 +1,13 @@
-import * as collection from "./schemas";
+import {
+  authorCollection,
+  brandCollection,
+  descriptionCollection,
+  postCollection,
+} from "./schemas";
 
 export const collections = {
-  "authors": collection.authorCollection,
-  "brands": collection.brandCollection,
-  "descriptions": collection.descriptionCollection,
+  "authors": authorCollection,
+  "brands": brandCollection,
+  "descriptions": descriptionCollection,
+  "posts": postCollection,
 };

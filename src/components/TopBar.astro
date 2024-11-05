@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import { type Difficulty } from "../scripts/types/Post.ts";
+import { type Difficulty } from "@scripts/types/Post.ts";
 
 interface Props {
     difficulty: Difficulty;
@@ -13,7 +13,11 @@ const { difficulty } = Astro.props;
     <button class="px-0.5 text-center w-20 rounded-full font-bold">
         <Icon name={`diff/${difficulty}`} title={`level ${difficulty}`} />
     </button>
-    <button>
-        <Icon name="gear" title="settings" size={20} />
+    <button
+        class="transition-transform hover:scale-110"
+    >
+        <Icon 
+            name="gear" title="settings" size={20} 
+        />
     </button>
 </div>

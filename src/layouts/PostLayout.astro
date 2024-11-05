@@ -1,9 +1,37 @@
 ---
+import { Image } from "astro:assets";
+import type { Post } from "@scripts/types/Post";
 import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+
+const { src, alt } = post.heroImg;
 ---
 
-<BaseLayout pageTitle="Posts">
-    <main class="grid grid-cols-3 justify-items-center px-10 mb-3 gap-y-8">
+<BaseLayout 
+    title={post.title} 
+    description={post.meta} 
+    className="flex flex-col items-center px-40" 
+>
+    <Image 
+        src={src} 
+        alt={alt} 
+        height={100} 
+        width={150} 
+        loading="eager" 
+        class="mb-8 min-h-96 min-w-full rounded-xl"
+    />
+    <article class="px-4 py-6 w-[64rem] bg-g-aose rounded-lg shadow-post">
+        <section class="p-3 mb-5 bg-w-aose rounded-md">
+            <h1>
+                <b>{post.title}</b>
+            </h1>
+            <p>{post.description}</p>
+        </section>
         <slot />
-    </main>
+    </article>
 </BaseLayout>

@@ -1,12 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
-import aoseImg from "../assets/aose_white.svg";
+import aoseImg from "@assets/aose_white.svg";
 import Anchor from "./Anchor.astro";
-import { currentYear } from "../content/schemas";
+import { currentYear } from "@content/schemas";
+
+interface Data {
+    year: number | null;
+    registry: string;
+    source: string;
+    terms: {ref: string; name: string;}[];
+}
 
 const content = await getEntry("brands", "aose");
-const { data } = content;
+const data: Data = content.data;
 
 const year = data.year 
     ? data.year 

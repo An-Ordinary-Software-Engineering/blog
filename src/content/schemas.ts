@@ -1,8 +1,7 @@
 import { z, defineCollection, reference } from "astro:content";
-
 export const currentYear = new Date().getFullYear();
 
-const authorCollection = defineCollection({
+export const authorCollection = defineCollection({
   type: "data",
   schema: z.object({
     name: z.string(),
@@ -27,7 +26,7 @@ const authorCollection = defineCollection({
   }),
 });
 
-const brandCollection = defineCollection({
+export const brandCollection = defineCollection({
   type: "data",
   schema: z.object({
     year: z
@@ -46,11 +45,23 @@ const brandCollection = defineCollection({
   }),
 });
 
-const descriptionCollection = defineCollection({
+export const descriptionCollection = defineCollection({
   type: "content",
   schema: z.object({
     author: reference("authors"),
   }),
 });
 
-export { authorCollection, brandCollection, descriptionCollection };
+export const postCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    difficulty: z.enum(["easy", "medium", "hard"]),
+    title: z.string(),
+    heroImg: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    meta: z.string(),
+    description: z.string(),
+  }),
+});

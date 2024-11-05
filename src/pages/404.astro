@@ -1,18 +1,20 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Anchor from "../components/Anchor.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Anchor from "@components/Anchor.astro";
 ---
 
-<BaseLayout pageTitle="404">
-    <main class="flex justify-center items-center">
-        <div class="flex flex-col gap-y-1 p-3 shadow-lg bg-g-aose rounded-xl w-fit text-center">
-            <div class="self-center p-2 shadow-post bg-b-aose rounded-lg text-w-aose w-fit">
-                <h1 class="text-5xl font-extrabold">404</h1>
-            </div>
-            <p class="text-xl font-bold">Página não encontrada!</p>
-            <p class="text-lg font-medium">Você está longe!</p>
-            <p class="text-sm font-normal">Volte para cá!</p>
-            <Anchor text="Clique aqui!" href="/" type="previous" />
+<BaseLayout 
+    title="404" 
+    className="flex justify-center items-center"
+    description="Isso não é um jogo de mundo aberto, mas você saiu do mapa!"
+>
+    <div class="flex flex-col gap-y-1 p-3 shadow-lg bg-g-aose rounded-xl w-fit text-center">
+        <div class="self-center p-2 shadow-post bg-b-aose rounded-lg text-w-aose w-fit">
+            <h1 class="text-5xl font-extrabold">404</h1>
         </div>
-    </main>
+        <p class="text-xl font-bold">Página não encontrada!</p>
+        <p class="text-lg font-medium">Você está longe!</p>
+        <p class="text-sm font-normal">Volte para cá!</p>
+        <Anchor text="Clique aqui!" href="/" type="previous" />
+    </div>
 </BaseLayout>

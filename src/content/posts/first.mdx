@@ -1,0 +1,73 @@
+---
+difficulty: "easy"
+title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+heroImg: { src: /images/card/undefined.png, alt: "A peaceful nature scene" }
+meta: "Something"
+description: "Maecenas lorem magna, euismod in erat in, commodo pharetra velit. Vivamus rutrum neque eu tortor lobortis rutrum."
+---
+
+# Resumo sobre o React
+
+<p>
+  React é uma **biblioteca JavaScript** de código aberto para a criação de
+  interfaces de usuário, desenvolvida e mantida pelo Facebook. Seu principal
+  objetivo é facilitar o desenvolvimento de aplicações web interativas e de alto
+  desempenho, permitindo a construção de componentes reutilizáveis e eficientes.
+</p>
+
+## Características principais do React
+
+- **Componentes**: O React é baseado no conceito de componentes, que são pedaços de código que representam partes da interface do usuário. Cada componente pode ter seu próprio estado e lógica, e pode ser reutilizado em diferentes partes da aplicação.
+- **JSX (JavaScript XML)**: O React utiliza uma sintaxe chamada JSX, que permite escrever HTML dentro do código JavaScript. JSX facilita a criação de interfaces dinâmicas, pois permite combinar estrutura e lógica em um único lugar.
+
+- **Estado e Props**:
+
+  - **State**: Representa os dados internos de um componente, podendo ser alterados ao longo do tempo. Quando o estado de um componente muda, o React re-renderiza o componente automaticamente.
+  - **Props**: São as propriedades que um componente recebe de seus pais. Elas são imutáveis e permitem a comunicação entre componentes.
+
+- **Unidirecionalidade**: O fluxo de dados no React é unidirecional, ou seja, os dados são passados de componentes pais para filhos através das props. Isso facilita o gerenciamento do estado da aplicação e a rastreabilidade de mudanças.
+
+- **Virtual DOM**: O React usa um conceito chamado **Virtual DOM** (Document Object Model), que é uma representação leve da árvore de elementos HTML. Quando o estado de um componente muda, o React compara a nova árvore com a anterior e aplica as mudanças de forma eficiente, minimizando operações no DOM real e melhorando a performance.
+
+- **Hooks**: Introduzido no React 16.8, os hooks permitem usar o estado e outros recursos do React (como efeitos colaterais) em componentes funcionais, sem a necessidade de escrever classes. Alguns dos hooks mais comuns são:
+  - `useState`: Para gerenciar o estado de um componente.
+  - `useEffect`: Para executar efeitos colaterais, como chamadas a APIs.
+  - `useContext`: Para compartilhar dados entre componentes sem passar props manualmente.
+
+## Vantagens do React
+
+- **Desempenho otimizado**: A utilização do Virtual DOM e o algoritmo de reconciliação permite que o React atualize apenas as partes da interface que realmente precisam ser alteradas, melhorando a performance.
+- **Reusabilidade de componentes**: A modularização através de componentes reutilizáveis facilita a manutenção e o escalonamento de grandes aplicações.
+
+- **Comunidade ativa**: O React possui uma comunidade muito ativa e vasto ecossistema de bibliotecas e ferramentas, o que acelera o desenvolvimento e oferece muitas soluções prontas para diversos tipos de problemas.
+
+- **Compatibilidade com outras bibliotecas e frameworks**: React pode ser integrado facilmente com outras bibliotecas ou frameworks, como Redux (para gerenciamento de estado) ou Next.js (para renderização do lado do servidor).
+
+## Como funciona o React?
+
+O React funciona criando componentes e controlando seu estado. Quando o estado de um componente muda, o React re-renderiza a parte relevante da UI. Para isso, ele compara a nova versão do Virtual DOM com a versão anterior e faz as atualizações necessárias no DOM real de maneira eficiente.
+
+## Exemplo básico de código em React
+
+```tsx
+import React, { useState } from "react";
+
+function App() {
+  const [count, setCount] = useState<number>(0);
+
+  return (
+    <div>
+      <h1>Contador: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Incrementar</button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Neste exemplo, temos um componente funcional `App` que utiliza o hook `useState` para controlar o estado de um contador. O valor do contador é exibido na tela, e ao clicar no botão, o valor do contador é incrementado.
+
+## Conclusão
+
+React é uma das bibliotecas mais populares para desenvolvimento de interfaces de usuário, permitindo a criação de aplicações web dinâmicas, escaláveis e de alto desempenho. Seu foco em componentes reutilizáveis e a eficiente atualização da interface através do Virtual DOM são algumas das razões pelas quais muitos desenvolvedores escolhem o React para seus projetos.

@@ -6,12 +6,13 @@ interface Props {
 }
 
 const { link, rel, blankActive } = Astro.props;
+const securityTarget = blankActive ? " noreferrer noopener" : "";
 ---
 
 <a
     class="transition-colors ease-in delay-150 py-1 px-4 hover:bg-[#f0f0f0] rounded-full text-b-aose text-lg font-bold"
     href={link}
-    rel={rel}
+    rel={rel + securityTarget}
     target={blankActive ? "_blank" : "_self"}
 >
 <slot />

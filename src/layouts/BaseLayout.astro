@@ -1,26 +1,52 @@
 ---
-import "../styles/globals.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import "@styles/globals.css";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 
 interface Props {
-	pageTitle: string;
+	title: string;
+	description?: string;
+	className?: string;
 }
 
-const { pageTitle } = Astro.props;
+const { title, description, className } = Astro.props;
 ---
 
-<html lang="pt-br">
+<html lang="pt-BR">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="icon"
+			href="/favicon/favicon.ico"
+		/>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/favicon/favicon.ico"
+		/>
+		<link
+			rel="shortcut icon"
+			href="/favicon/favicon.ico"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/favicon/favicon.svg"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle} | aOSE TechBlog</title>
+		<meta 
+			name="description" 
+			content={description ??
+			 "Blog sobre tecnologia, desenvolvimento e Engenharia de Software."}
+		/>
+		<title>{title} | aOSE TechBlog</title>
 	</head>
 	<body>
 		<Header />
-			<slot />
+			<main class={className}>
+				<slot />
+			</main>
 		<Footer />
 	</body>
 </html>
