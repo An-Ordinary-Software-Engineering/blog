@@ -1,9 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import PostCard from "../components/PostCard.astro";
-import CardLayout from "../layouts/CardLayout.astro";
-import type { Post } from "../scripts/types/Post.ts";
+import PostCard from "@components/PostCard.astro";
+import CardLayout from "@layouts/CardLayout.astro";
+import type { Post } from "@scripts/types/Post.ts";
 
 const metaData: CollectionEntry<"posts">[] = await getCollection("posts");
 ---
