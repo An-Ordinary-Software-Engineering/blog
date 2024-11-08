@@ -5,10 +5,11 @@ import Title from "./Title.astro";
 import Presentation from "./Presentation.astro";
 import MediaList from "./MediaList.astro";
 import StackList from "./StackList.astro";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
     author: Author;
-    description: any;
+    description: CollectionEntry<"descriptions">;
 }
 
 const { author, description } = Astro.props;
