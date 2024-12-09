@@ -11,6 +11,9 @@ export default {
       boxShadow: {
         post: "7px 6px 9px 1px #00000025",
       },
+      screens: {
+        xs: "320px",
+      },
     },
   },
   plugins: [],
