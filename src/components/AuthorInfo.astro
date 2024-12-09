@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import { type Author } from "@scripts/types/Author";
-import Show from "./utils/Show.astro";
 import Title from "./Title.astro";
 import Presentation from "./Presentation.astro";
 import MediaList from "./MediaList.astro";
@@ -30,17 +29,13 @@ const { Content } = await description?.render() ?? {};
     />
     <section class="flex flex-col w-[50%]">
         <Title>{author.name}</Title>
-        <Show when={media}>
-            <MediaList media={media!} />
-        </Show>
-        <Show when={stacks}>
-            <StackList stacks={stacks!} />
-        </Show>
+        {media && <MediaList media={media} />}
+        {stacks && <StackList stacks={stacks} />}
     </section>
     <span class="border-[1px] border-[#f1f1f1] mx-5"></span>
-    <Show when={Content}>
+    { Content &&
         <Presentation who={author.name}>
             <Content />
         </Presentation>
-    </Show>
+    }
 </article>

@@ -1,9 +1,0 @@
----
-interface Props<T> {
-    when: T | undefined | null | false;
-}
-
-const { when } = Astro.props;
----
-
-{ when && <slot/> }
