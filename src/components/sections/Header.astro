@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import aoseImg from "@assets/aose_black.svg";
 import NavBar from "./NavBar.astro";
+import Menu from "./Menu.astro";
 ---
 
 <header 
@@ -19,5 +20,6 @@ import NavBar from "./NavBar.astro";
           loading="eager"
         />
       </a>
-      <NavBar />
+      <Menu className="xs:visible sm:invisible" />
+      <NavBar className="xs:hidden sm:inline" />
 </header>

@@ -1,8 +1,16 @@
 ---
-import Link from "@components/Link.astro";;
+import Link from "@components/Link.astro";
+
+interface Props {
+    className?: string;
+}
+
+const { className } = Astro.props;
+
+const classes = `${className} flex gap-4 w-fit m-4 items-center`;
 ---
 
-<nav class="flex gap-4 w-fit m-4 items-center">
+<nav class={classes}>
     <Link link="/" rel="next" blankActive={false}>Início</Link>
     <Link link="/cards/" rel="next" blankActive={false}>Posts</Link>
     <Link link="/about/" rel="author" blankActive={false}>Sobre</Link>
