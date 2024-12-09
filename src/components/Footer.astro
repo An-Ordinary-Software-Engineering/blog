@@ -5,7 +5,7 @@ import aoseImg from "@assets/aose_white.svg";
 import Anchor from "./Anchor.astro";
 import { currentYear } from "@content/schemas";
 
-interface Data {
+interface Props {
     year: number | null;
     registry: string;
     source: string;
@@ -13,7 +13,7 @@ interface Data {
 }
 
 const content = await getEntry("brands", "aose");
-const data: Data = content.data;
+const data: Props = content!.data;
 
 const year = data.year 
     ? data.year 
